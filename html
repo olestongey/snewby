@@ -1,0 +1,109 @@
+
+<DOCTYPE html>
+<html>
+  <head>
+  	<title>Snewby</title>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400;300' rel='stylesheet' type='text/css'>
+    <link href='ranjam.css' rel='stylesheet'>
+        <script src="//code.jquery.com/jquery-2.2.0.min.js"></script>
+        <script src="jquery.js"></script>
+  </head>
+  <body>
+
+    <div class="menu">
+      
+      <!-- Menu icon -->
+      <div class="icon-close">
+        <img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/close.png">
+      </div>
+
+      <!-- Menu -->
+      <ul>
+        <li><a href="#" class="one">About</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Main body -->
+    <div class="jumbotron">
+
+      <div class="icon-menu">
+        <i class="fa fa-bars"></i>
+        Menu
+      </div>
+      <!-- About-->
+      <div id="about" class="hidden">
+      	<h1>About Sethington Allen</h1>
+      	  <h2>Seth was born in Chicago, where he gained a passion for the arts. Soon after he quickly chose to live a Salt Life--Rock On, dude!</h2>    
+      	  </div>
+    
+    <script>
+var main = function() {
+  /* Push the body and the nav over by 285px over */
+  $('.icon-menu').click(function() {
+    $('.menu').animate({
+      left: "0px"
+    }, 200);
+
+    $('body').animate({
+      left: "285px"
+    }, 200);
+  });
+
+  /* Then push them back */
+  $('.icon-close').click(function() {
+    $('.menu').animate({
+      left: "-285px"
+    }, 200);
+
+    $('body').animate({
+      left: "0px"
+    }, 200);
+  });
+  $(function(){
+  	$('#about').hide();
+  });
+
+ $('.one').click(function(){
+   $('#about').toggle(50);
+ });
+      
+
+};
+
+
+$(document).ready(main);
+</script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
